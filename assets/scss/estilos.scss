@@ -1,0 +1,186 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+}
+
+body{
+    background-color: $veryDarkBlue_main;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+main{
+    background-color: $veryDarkBlue_bg;
+    width: 350px;
+    height: 600px;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: 2px 50px 50px 1px rgba(0, 0, 0, 0.2)
+}
+
+
+.image{
+    display: flex;
+   justify-content: center;
+    align-items: flex-start;
+    justify-self: flex-start;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    img{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    &:hover::after{
+        background-color: $cyan;
+        opacity: 0.5;
+          }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+    }
+    &::before{
+        content: '\f06e';
+        transition: opacity 0.3s ease-in-out;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 3rem;
+        color: white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 49%;
+        left: 49%;
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+      
+        
+        z-index: 101;
+
+    }
+}
+
+.text{
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+     align-self:center;
+    
+     width: 100%;
+     height: 100%;
+ 
+    &__title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 1rem;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            color: $cyan;
+        }
+    }
+    &__description{
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $SoftBlue;
+        line-height: 1.5;
+    }
+    &__stats{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        
+    }
+    &__stats--eth{
+        display: flex;
+        align-items: center;
+        gap: 5px;   
+        color: $cyan;
+        font-weight: 600;
+        font-size: 1.2rem;
+        img{
+            width: 10px;
+            height: 15px;
+        }
+    }
+    &__stats--days{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $SoftBlue;
+        font-size: 1.2rem;
+    }
+}
+
+.text__author{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+
+    .autor{
+        display: flex;
+        &__image{
+            width: 2.2rem;
+            height:  2.2rem;
+            border: 1px solid $white;
+            border-radius: 50%;
+            cursor: pointer;    
+        }
+        &__name{
+            color: $SoftBlue;
+            font-weight: 400;  
+            font-size: 1.1rem; 
+        }
+    }
+    
+}
+
+.text__line{
+    height: 0.2rem;
+    border-color:$veryDarkBlue_line ;
+    margin-bottom: 20px;
+    
+}
+.text__author--name{
+    color: $white;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1rem;
+    &:hover{
+        color: $cyan;
+    }
+}
+
+.attribution{
+    color: $SoftBlue;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+    transform: translateY(2rem);
+    a{
+        color: $cyan;
+    }
+}

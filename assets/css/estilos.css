@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+main {
+  background-color: hsl(216, 50%, 16%);
+  width: 350px;
+  height: 600px;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-shadow: 2px 50px 50px 1px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  justify-self: flex-start;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+.image:hover::after {
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.5;
+}
+.image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+.image::before {
+  content: "\f06e";
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3rem;
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 49%;
+  left: 49%;
+  opacity: 0;
+}
+.image:hover::before {
+  opacity: 1;
+  z-index: 101;
+}
+
+.text {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+}
+.text__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.text__title:hover {
+  color: hsl(178, 100%, 50%);
+}
+.text__description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  line-height: 1.5;
+}
+.text__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.text__stats--eth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.text__stats--eth img {
+  width: 10px;
+  height: 15px;
+}
+.text__stats--days {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: hsl(215, 51%, 70%);
+  font-size: 1.2rem;
+}
+
+.text__author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.text__author .autor {
+  display: flex;
+}
+.text__author .autor__image {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.text__author .autor__name {
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.text__line {
+  height: 0.2rem;
+  border-color: hsl(215, 32%, 27%);
+  margin-bottom: 20px;
+}
+
+.text__author--name {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+}
+.text__author--name:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  color: hsl(215, 51%, 70%);
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+  transform: translateY(2rem);
+}
+.attribution a {
+  color: hsl(178, 100%, 50%);
+}
+
+/*# sourceMappingURL=estilos.css.map */
